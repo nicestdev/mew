@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -f .env ]; then
+    export $(cat .env | grep -v '#' | sed 's/\r$//' | awk '/=/ {print $1}')
+
+    if [ $1 == "artisan" ]; then
+        docker exec -it web-$PROJECT_NAME php $@
+    else
+        docker exec -it web-"${PROJECT_NAME}" $@
+    fi
+else
+    echo "Error: Environment file .env not found"
+    echo "       Create file with your environment settings at ${PWD}/.env"
+fi

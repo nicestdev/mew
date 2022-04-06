@@ -1,0 +1,8 @@
+{
+    "name": "nicestdev/mew",
+    "description": "Mew is a small and simple tool to forward commands in the WSL2 console to a Docker container.",
+    "license": "MIT",
+    "bin": [
+        "bin/mew"
+    ]
+}
