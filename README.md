@@ -26,7 +26,22 @@ This CLI application is installed using [Composer](https://getcomposer.org):
 composer global require nicestdev/mew
 ```
 
-Make sure the `~/.composer/vendor/bin` directory is in your systems `PATH`.
+## Composer settings (if necessary)
+
+Get Composer path
+```
+composer -n config --global home
+```
+
+Copy the Composer path in your .bashrc file.\
+`Notice: This is just an example path`
+```
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+```
+Apply changes
+```
+source ~/.bashrc
+```
 
 ## Configuration
 
